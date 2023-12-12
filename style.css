@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: none; 
+    background-image: url('fundo.jpg');
+}
+
+.falling-elements-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.falling-element {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-image: url('ele.gif'); 
+    background-size: cover;
+    animation: fallAnimation linear infinite;
+}
+
+@keyframes fallAnimation {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 50px;
+    height: 80px;
+    background: url('docinho.png') no-repeat center center; 
+    background-size: contain;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.shake {
+    animation: shakeAnimation 0.2s ease-in-out;
+}
+
+@keyframes shakeAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.counter {
+
+    margin: 2%;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+}
+.timer{
+    margin: 2%;
+    position: fixed;
+    font-size: 24px;
+    color: #333;
+}
